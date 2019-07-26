@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="manager" class="com.stackroute.spring.domain.Manager" autowire="byType">
+        <constructor-arg index="0" value="1"> </constructor-arg>
+        <constructor-arg index="1" value="Pushkar"></constructor-arg>
+<!--        <constructor-arg index="2" ref="surveyor"></constructor-arg>-->
+        <property name="surveyor" ref="surveyor"></property>
+    </bean>
+    <bean id="surveyor" class="com.stackroute.spring.domain.Surveyor">
+        <property name="id" value="1"></property>
+        <property name="name" value="Samresh"></property>
+    </bean>
+    <bean id="surveyor2" class="com.stackroute.spring.domain.Surveyor">
+        <property name="id" value="2"></property>
+        <property name="name" value="Atul"></property>
+    </bean>
+
+</beans>
